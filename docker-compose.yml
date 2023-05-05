@@ -1,0 +1,13 @@
+version: '3.8'
+services: 
+    main:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        command: 'php artisan serve --host=0.0.0.0'
+        container_name: sugod-na-sugbo
+        image: sugod-na-sugbo
+        volumes:
+            - .:/app
+        ports:
+            - 8000:8000
